@@ -78,8 +78,8 @@ A) ***Function Name***: gibbs_sample
 ***Function Outputs***: Matrix of dimensions (num_chain, chain_length,2)
 
 Using the loops: 
--> ***x[i] = N * $\sqrt{1-rho^2}$ + rho$*$y[i-1]*** 
--> ***y[i] = N * $\sqrt{1-rho^2}$ + rho$*$x[i]*** 
+-> ***x[i] = N * \sqrt{1-rho^2} + rho*y[i-1]*** 
+-> ***y[i] = N * \sqrt{1-rho^2} + rho*x[i]*** 
 
 The above formula forms the basis for Gibbs sampling where we sample from a bi-variate normal distribution N with correlation coefficient rho. 
 We return the output matrix of dimension (1000,100,2) from this function. 
