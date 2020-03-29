@@ -3,15 +3,17 @@ Course assignments from UCLA Statistics course - Statistical Programming (STATS2
 
 This report is intended to give a brief overview about the assignments implemented in the STATS202A course. There were 8 HW assignments and below are comments about each of the HW assignments. 
 
-HW 1 - Random Number Generation and Monte Carlo Sampling 
-HW 2 - Metropolis-Hastings and Gibbs Sampling
-HW 3 - Linear Regression using the Sweep Operation 
-HW 4 - QR Decomposition and Linear Regression 
-HW 5 - Eigen decomposition and PCA
-HW 6 - Logistic Regression and Adaboost
-HW 7 - XGBoost using Python Packages 
-HW 8 - Support Vector Machines 
+## Topics: 
 
+HW 1 - Random Number Generation and Monte Carlo Sampling  
+HW 2 - Metropolis-Hastings and Gibbs Sampling  
+HW 3 - Linear Regression using the Sweep Operation   
+HW 4 - QR Decomposition and Linear Regression   
+HW 5 - Eigen decomposition and PCA  
+HW 6 - Logistic Regression and Adaboost  
+HW 7 - XGBoost using Python Packages   
+HW 8 - Support Vector Machines   
+  
 ## HW 1 - Random Number Generation and Monte Carlo Sampling
 Languages used: Python and R 
 The below random number generators were coded: 
