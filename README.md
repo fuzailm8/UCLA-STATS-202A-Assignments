@@ -1,9 +1,18 @@
 # UCLA-STATS-202A-Assignments
-Course assignments from UCLA Statistics course - Statistical Programming (STATS202A) 
+Course assignments from UCLA Statistics course - Statistical Programming (STATS202A) (Fall 2019) 
 
-This report is intended to give a brief overview and information about the previous HWs implemented in the STATS202A course. There were 8 HW assignments and below are comments about each of the HW assignments. 
+This report is intended to give a brief overview about the assignments implemented in the STATS202A course. There were 8 HW assignments and below are comments about each of the HW assignments. 
 
-## HW 1 - Monte Carlo Sampling
+HW 1 - Random Number Generation and Monte Carlo Sampling 
+HW 2 - Metropolis-Hastings and Gibbs Sampling
+HW 3 - Linear Regression using the Sweep Operation 
+HW 4 - QR Decomposition and Linear Regression 
+HW 5 - Eigen decomposition and PCA
+HW 6 - Logistic Regression and Adaboost
+HW 7 - XGBoost using Python Packages 
+HW 8 - Support Vector Machines 
+
+## HW 1 - Random Number Generation and Monte Carlo Sampling
 Languages used: Python and R 
 The below random number generators were coded: 
 - Uniform distribution [0,1] using the Linear Congruential Generator (LCG) algorithm. It is defined by the formula:
@@ -39,7 +48,7 @@ For d = 10,
 ***Function Inputs*** = d
 ***Function Outputs*** = None
   
-## HW2 - Metropolis-Hastings and Gibbs
+## HW2 - Metropolis-Hastings and Gibbs Sampling
 ### Part 1 - Sampling using Metropolis-Hastings algorithm
 A) ***Function Name***: sample_uniform
 	***Function Inputs*** = size, lower limit, upper limit 
@@ -202,20 +211,6 @@ We then apply gradient descent to update the coefficients B:
 After this process, we get our output  beta estimate.
  
 D) ***Function Name***: myAdaboost 
-***Function Inputs***: x1,x2,y 
-x1, x2 - two uniform random sequences 
-y - 0/1 label to indicate if ***x1<sup>2</sup> + x2<sup>2</sup> < 1***
-***Function Outputs***: None 
-
-   The key overall processes involved here are: 
-   ***Splitting*** - Split the data into a training and testing data set. 
-   ***Training*** - Looping through each feature and trying to find the optimal feature and optimal cut point at which decision boundary can be made. 
-   ***Classifying*** - Making predictions on our input based on these decision boundaries for each decision tree. 
-   ***Voting*** - Using the significance of each decision tree, perform the voting process to classify an input as a label based on the decision boundaries made.  
-***Boosting*** - Looping through the forest and building the trees iteratively and hence keep updating weights through each iteration and update significance &alpha; of each tree. This is to perform the boosting process.  
-***Tracking accuracy***- Calculate the training error and testing error per iteration. 
-
-E) ***Function Name***: myXGBoost 
 ***Function Inputs***: x1,x2,y 
 x1, x2 - two uniform random sequences 
 y - 0/1 label to indicate if ***x1<sup>2</sup> + x2<sup>2</sup> < 1***
