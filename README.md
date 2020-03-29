@@ -19,7 +19,7 @@ Languages used: Python and R
 The below random number generators were coded: 
 - Uniform distribution [0,1] using the Linear Congruential Generator (LCG) algorithm. It is defined by the formula:
 ![{\displaystyle X_{n+1}=\left(aX_{n}+c\right){\bmod {m}}}](https://wikimedia.org/api/rest_v1/media/math/render/svg/3a40cd0032b03626a091a5a0e1b4684b3d5eb406)
-X~n~ and X~n+1~ are terms in the random number sequence. The 'm' is the modulus (m>0), 'a' is the multiplier (0<a<m) and 'c' is the increment (0<=c<m). 
+X<sub>n</sub> and X<sub>n+1</sub> are terms in the random number sequence. The 'm' is the modulus (m>0), 'a' is the multiplier (0<a<m) and 'c' is the increment (0<=c<m). 
 
 	***Function Inputs*** : Lower limit, Upper limit. 
 	***Function Outputs***: None
