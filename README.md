@@ -77,11 +77,7 @@ A) ***Function Name***: gibbs_sample
 ***Function Inputs***: x0, y0, rho, num_chain, chain_length, mean, variance 
 ***Function Outputs***: Matrix of dimensions (num_chain, chain_length,2)
 
-Using the loops: 
--> ***x[i] = N * \sqrt{1-rho^2} + rho*y[i-1]*** 
--> ***y[i] = N * \sqrt{1-rho^2} + rho*x[i]*** 
-
-The above formula forms the basis for Gibbs sampling where we sample from a bi-variate normal distribution N with correlation coefficient rho. 
+In Gibbs sampling, we sample from a bi-variate normal distribution N with correlation coefficient rho. 
 We return the output matrix of dimension (1000,100,2) from this function. 
 
 B) ***Function Name***: gibbs_simulation
@@ -109,7 +105,7 @@ Y - an (n,1) response matrix
 beta_hat - (p+1) dimensional vector of linear regression coefficient estimates
 
 Given input X and response Y, we use this function to use the Sweep operator to obtain the linear regression coefficient estimates, beta. Using the formula: 
-***Y = X$*$Beta + Intercept***
+***Y = X * Beta + Intercept***
 X - (n,p) 
 B - (p,1) 
 Intercept - (n,1)
@@ -172,7 +168,7 @@ Q - new basis matrix, p x p
 Z - new data matrix, n x p  
 
 We calculate the covariance matrix of input matrix X and pass this as input to myEigen_QR. 
-After performing PCA, the new basis vectors for X are the eigen vectors of the covariance matrix of X which we call Q. To obtain the new data points, we use equation ***Z = X $*$ Q***. 
+After performing PCA, the new basis vectors for X are the eigen vectors of the covariance matrix of X which we call Q. To obtain the new data points, we use equation ***Z = X * Q***. 
 Therefore, we now have the new basis vectors after PCA (Q) and new data points matrix (Z).  
 
 ## HW6 - Logistic Regression, Adaboost and XGBoost
@@ -200,7 +196,7 @@ C) ***Function Name***: myLogisticSolution
 
 We pass the X and Y to the myLM function to get the linear regression coefficient estimates beta. We then use the sigmoid function:
 ***g(z) = 1/(1+e<sup>-z</sup>)*** 
-where z = X $*$ B 
+where z = X * B 
 
 Here, we use the cost function: 
 ***J = (-1/n) * (ylog(y_hat) + (1-y)log(1-y_hat))*** 
@@ -252,10 +248,10 @@ Depending on the kernel type specified (gaussian, linear, polynomial, sigmoid), 
  
 | Kernel  | 	Equation |
 |--|--|
-| Gaussian | ***e<sup>(-gamma$*$(u-v)<sup>2</sup>)</sup>***  |
-|Linear|***u' $*$ v***|
-| Polynomial | ***(gamma$*$u'$*$v + c)<sup>2</sup>*** |
-| Sigmoid | ***tanh(gamma$*$u'$*$v + c)*** |
+| Gaussian | ***e<sup>(-gamma*(u-v)<sup>2</sup>)</sup>***  |
+|Linear|***u' * v***|
+| Polynomial | ***(gamma*u'*v + c)<sup>2</sup>*** |
+| Sigmoid | ***tanh(gamma*u'*v + c)*** |
 
  
 
