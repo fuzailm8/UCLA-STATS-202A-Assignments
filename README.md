@@ -248,10 +248,10 @@ Depending on the kernel type specified (gaussian, linear, polynomial, sigmoid), 
  
 | Kernel  | 	Equation |
 |--|--|
-| Gaussian | ***e<sup>(-gamma*(u-v)<sup>2</sup>)</sup>***  |
-|Linear|***u' * v***|
-| Polynomial | ***(gamma*u'*v + c)<sup>2</sup>*** |
-| Sigmoid | ***tanh(gamma*u'*v + c)*** |
+| Gaussian | ***e<sup>(-gamma(u-v)<sup>2</sup>)</sup>***  |
+|Linear|***u'v***|
+| Polynomial | ***(u'v + c)<sup>d</sup>*** |
+| Sigmoid | ***tanh(u'v + c)*** |
 
  
 
